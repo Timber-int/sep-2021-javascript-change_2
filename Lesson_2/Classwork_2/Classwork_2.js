@@ -2,14 +2,14 @@
 //     Потрібно знайти та вивести максимальне число з тих двох .
 //     Також потрібно врахувати коли введені рівні числа.
 //
-// let number1 = prompt('Number1');
-// let number2 = prompt('Number2');
+// let number1 = +prompt('Number1');
+// let number2 = +prompt('Number2');
 //
-// if (+number1 > +number2) {
+// if (number1 > number2) {
 //     console.log(number1);
 // } else if (number2 > number1) {
 //     console.log(number2);
-// } else if (+number1 === +number2) {
+// } else if (number1 === number2) {
 //     console.log('Числа рівні');
 // }else {
 //     console.log('Введіть правильні дані')
@@ -19,13 +19,13 @@
 // Користувач вводить номер квартири просто в змінні або через prompt('') .
 //     Програма повинна зазначити, в якому під'їзді знаходиться дана квартира.
 
-// let chooseNumberOfFlat = prompt('Введіть номер квартири');
+// let chooseNumberOfFlat = +prompt('Введіть номер квартири');
 //
-// if (+chooseNumberOfFlat >= 1 && +chooseNumberOfFlat <= 20) {
+// if (chooseNumberOfFlat >= 1 && chooseNumberOfFlat <= 20) {
 //     console.log('Під\'їзд 1');
-// } else if (+chooseNumberOfFlat >= 21 && +chooseNumberOfFlat <= 48) {
+// } else if (chooseNumberOfFlat >= 21 && chooseNumberOfFlat <= 48) {
 //     console.log('Під\'їзд 2');
-// } else if (+chooseNumberOfFlat >= 49 && +chooseNumberOfFlat <= 90) {
+// } else if (chooseNumberOfFlat >= 49 && chooseNumberOfFlat <= 90) {
 //     console.log('Під\'їзд 3');
 // }else {
 //     console.log('Введіть правильні дані')

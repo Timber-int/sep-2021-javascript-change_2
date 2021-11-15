@@ -1,0 +1,60 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    background: teal;
+    position: absolute;
+    justify-content: center;
+}
+
+.post-card {
+    width: 17%;
+    margin: 5px;
+    border: 2px solid black;
+
+}
+
+.post-card h3 {
+    padding: 10px;
+    margin: 2px;
+    font-size: 10px;
+    color: tomato;
+
+}
+
+.post-card p {
+    color: whitesmoke;
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+.users-box {
+    background: lightgreen;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+}
+
+.user-block {
+    margin: 10px;
+    width: 35%;
+    border: 2px solid tomato;
+    padding: 5px;
+}
+
+.user-block h2 {
+    font-size: 10px;
+    font-weight: revert;
+    color: lightcoral;
+}
+
+.user-block h3 {
+    font-size: 8px;
+    font-weight: revert;
+    color: lightseagreen;
+}
+
+.address-block p {
+    font-size: 8px;
+    color: lightslategrey;
+}

@@ -96,19 +96,19 @@
     console.log('------------------------------------------------');
 
     function changeElementPosition(array, i) {
-
         for (let j = 0; j < array.length; j++) {
             if (j === i) {
-
+                array.splice(j, 2, array[j + 1], array[j]);
 
             }
         }
-
         return console.log(array);
 
     }
 
     changeElementPosition([9, 8, 0, 4], 0);
+    changeElementPosition([9, 8, 0, 4], 1);
+    changeElementPosition([9, 8, 0, 4], 2);
 
 }
 //
@@ -131,7 +131,7 @@
                 num = array.splice(i, 1);
                 for (let j = 0; j < num.length; j++) {
 
-                    array.push(num[j])
+                    array.push(num[j]);
                 }
             }
         }

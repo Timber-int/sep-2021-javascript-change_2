@@ -123,10 +123,11 @@
     console.log('------------------------------------------------');
 
     function transportArrayElement(array) {
-        let arrayNew = [];
+
         let num;
 
-        for (let i = 0; i < array.length; i++) {
+        for (let i = array.length - 1; i >= 0; i--) {
+
             if (array[i] === 0) {
                 num = array.splice(i, 1);
                 for (let j = 0; j < num.length; j++) {

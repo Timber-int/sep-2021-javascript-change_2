@@ -44,6 +44,8 @@ funcValidator('some.email@gmail.com');
 funcValidator('some@EMAIL.COM');
 funcValidator('some@EMAIL.com');
 funcValidator('@EMAIL.com');
+funcValidator('helloUser@EMAIL.com');
+
 
 // - є масив let coursesArray = [
 //     {

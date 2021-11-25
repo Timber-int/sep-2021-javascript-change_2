@@ -19,9 +19,17 @@ const funcValidator = (email) => {
     console.log(email);
 
     email = email.toLowerCase().trim();
+    // console.log(email)
 
-    if (email.startsWith('someemail') || email.startsWith('some@email') && email.includes('@')
-        && email.includes('.', email.indexOf('@') + 3)) {
+    let sliceEmail = email.slice((email.length - email.length), email.indexOf('@'));
+
+    let point = email.includes('.', email.indexOf('@') + 3);
+
+    // console.log('dasasd',point)
+    //
+    // console.log(sliceEmail)
+
+    if (email.includes(sliceEmail) && sliceEmail.length>0&& !sliceEmail.includes('.') && email.includes('@') && point) {
         console.log('Email valid');
     } else {
         console.log('Email is not valid');
@@ -35,6 +43,7 @@ funcValidator('someeMAIL@i.ua');
 funcValidator('some.email@gmail.com');
 funcValidator('some@EMAIL.COM');
 funcValidator('some@EMAIL.com');
+funcValidator('@EMAIL.com');
 
 // - є масив let coursesArray = [
 //     {
@@ -239,3 +248,4 @@ console.log(count('Астрономия это наука о небесных о
 
     cutString(str, 4);
 }
+

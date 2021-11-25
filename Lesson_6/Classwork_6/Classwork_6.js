@@ -178,8 +178,19 @@ console.log('Пофільтрований курси з тривалістю б�
 console.log('----------------------------------');
 
 const cutString = (str, n) => {
+    let array = [];
+    console.log(str);
+
+    for (let i = 0; i <= str.length + 1; i++) {
+
+        array.push(str.slice(0, n));
+
+        str = str.slice(n);
+
+    }
+    return array;
 
 
 };
 
-cutString('наслаждение', 3);
+console.log(cutString('наслаждение', 3));

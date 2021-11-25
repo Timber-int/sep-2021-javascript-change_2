@@ -248,6 +248,6 @@ console.log(count('Астрономия это наука о небесных о
 
     let str = "Сила тяжести приложена к центру масс тела";
 
-    cutString(str, 4);
+    cutString(str, 5);
 }
 

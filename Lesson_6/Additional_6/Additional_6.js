@@ -218,13 +218,23 @@ console.log(count('Астрономия это наука о небесных о
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 //     let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
+{
+    console.log('----------------------------------');
 
-console.log('----------------------------------');
+    const cutString = (str, n) => {
 
-const cutString = (str, n) => {
+        str = str.split(' ');
+        console.log('Arr_1',str)
 
+        for (let i = 0; i <= str.length - n ; i++) {
+            str.pop();
+
+        }
+
+        console.log('Arr_2',str)
+    }
+
+    let str = "Сила тяжести приложена к центру масс тела";
+
+    cutString(str, 5);
 }
-
-let str = "Сила тяжести приложена к центру масс тела";
-
-console.log(cutString(str, 5));

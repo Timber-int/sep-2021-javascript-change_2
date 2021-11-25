@@ -68,7 +68,6 @@ console.log('------------------------------------');
 
 const func4 = (array) => {
 
-
     for (let i = array.length - 1; i >= 0; i--) {
         if (array[i] === 0) {
             let num = array.splice(i, 1);
@@ -85,4 +84,74 @@ const func4 = (array) => {
 console.log(func4([1, 0, 6, 0, 3]));
 console.log(func4([0, 1, 2, 3, 4]));
 console.log(func4([0, 0, 1, 0]));
+
+// Задача FizzBuzz
+
+console.log('------------------------------------');
+
+const fizzBuzz = (n) => {
+
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('fizzbuzz');
+
+        } else if (i % 3 === 0) {
+            console.log('fizz');
+
+        } else if (i % 5 === 0) {
+            console.log('buzz');
+
+        } else console.log(i);
+    }
+}
+
+fizzBuzz(16);
+
+// Задача Find Vowels
+
+console.log('------------------------------------');
+
+const findVowels = (str) => {
+    let sum = 0;
+    str = str.toLowerCase();
+
+    let vowels = 'aeiou';
+
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < vowels.length; j++) {
+            if (str[i] === vowels[j]) {
+                sum += str[i].length
+            }
+        }
+    }
+    return sum;
+
+}
+
+console.log(findVowels('hJHJHJHJHishdioehriweh'));
+
+// Задача Find Vowels (New way)
+console.log('-------------- includes ---------------');
+
+const findVowelsNew = (str) => {
+    let sum = 0;
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    for (let elem of str.toLowerCase()) {
+        if (vowels.includes(elem)) {
+            sum += 1;
+        }
+    }
+
+    return sum;
+}
+
+console.log(findVowelsNew('hJHJHJHJHishdioehriweh'));
+
+
+
+
+
+
+
 

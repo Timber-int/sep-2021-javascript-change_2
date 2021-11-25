@@ -224,17 +224,18 @@ console.log(count('Астрономия это наука о небесных о
     const cutString = (str, n) => {
 
         str = str.split(' ');
-        console.log('Arr_1',str)
+        console.log('Arr_1', str)
 
-        for (let i = 0; i <= str.length - n ; i++) {
+        for (let i = 0; i <= str.length - n; i++) {
             str.pop();
 
         }
+        str = str.join(' ');
 
-        console.log('Arr_2',str)
+        console.log('Arr_2', str);
     }
 
     let str = "Сила тяжести приложена к центру масс тела";
 
-    cutString(str, 5);
+    cutString(str, 4);
 }

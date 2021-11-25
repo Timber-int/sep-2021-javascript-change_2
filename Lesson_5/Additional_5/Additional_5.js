@@ -131,6 +131,7 @@ const findVowels = (str) => {
 console.log(findVowels('hJHJHJHJHishdioehriweh'));
 
 // Задача Find Vowels (New way)
+
 console.log('-------------- includes ---------------');
 
 const findVowelsNew = (str) => {

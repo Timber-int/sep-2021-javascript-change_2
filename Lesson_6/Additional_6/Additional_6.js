@@ -29,7 +29,7 @@ const funcValidator = (email) => {
     //
     // console.log(sliceEmail)
 
-    if (email.includes(sliceEmail) && sliceEmail.length>0&& !sliceEmail.includes('.') && email.includes('@') && point) {
+    if (email.includes(sliceEmail) && sliceEmail.length > 0 && !sliceEmail.includes('.') && email.includes('@') && point) {
         console.log('Email valid');
     } else {
         console.log('Email is not valid');
@@ -233,21 +233,21 @@ console.log(count('Астрономия это наука о небесных о
     console.log('----------------------------------');
 
     const cutString = (str, n) => {
-
         str = str.split(' ');
-        console.log('Arr_1', str)
 
-        for (let i = 0; i <= str.length - n; i++) {
-            str.pop();
+        let newArray = [];
 
+        for (let i = 0; i < n; i++) {
+            newArray.push(str[i]);
         }
-        str = str.join(' ');
 
-        console.log('Arr_2', str);
+        return newArray.join(' ');
+
     }
 
     let str = "Сила тяжести приложена к центру масс тела";
 
-    cutString(str, 5);
+    console.log(cutString(str, 3));
+
 }
 

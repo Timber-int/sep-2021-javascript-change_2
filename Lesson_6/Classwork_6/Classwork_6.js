@@ -14,23 +14,55 @@ let n1 = 'Harry..Potter'
 let n2 = 'Ron---Whisley'
 let n3 = 'Hermione__Granger'
 
-const normalizeFunc = (name) => {
+//№1
+// const normalizeFunc = (name) => {
+//
+//     if (name.includes('..')) {
+//         return name.replace('..', ' ');
+//
+//     } else if (name.includes('---')) {
+//         return name.replace('---', ' ');
+//
+//     } else if (name.includes('__')) {
+//         return name.replace('__', ' ');
+//
+//     }
+//
+// };
+//№2
+// const normalizeFunc = (str, symbol) => {
+//     str = str.trim();
+//
+//     if (str.includes(symbol)) {
+//        str =  str.replace(symbol, ' ');
+//     }
+//
+//     return str;
+//
+// };
+//№3
+const normalizeFunc = (string, symbol) => {
+    const newArray = [];
 
-    if (name.includes('..')) {
-        return name.replace('..', ' ');
+    if (string.includes(symbol)) {
+        let newStr = string.split(symbol);
 
-    } else if (name.includes('---')) {
-        return name.replace('---', ' ');
-
-    } else if (name.includes('__')) {
-        return name.replace('__', ' ');
+        newStr.forEach((str) => {
+            if (str) {
+                newArray.push(str);
+            }
+        });
 
     }
 
+    return newArray.join(' ');
+
 };
-console.log(normalizeFunc(n1));
-console.log(normalizeFunc(n2));
-console.log(normalizeFunc(n3));
+
+
+console.log(normalizeFunc(n1, '..'));
+console.log(normalizeFunc(n2,'---'));
+console.log(normalizeFunc(n3,'__'));
 //
 //     - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
 console.log('----------------------------------');

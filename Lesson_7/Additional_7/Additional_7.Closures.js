@@ -16,6 +16,7 @@ function userCard(number) {
         putCredits: (money) => {
             information.balance = information.balance + money;
 
+
         },
 
         takeCredits: (money) => {

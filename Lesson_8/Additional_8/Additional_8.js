@@ -1,18 +1,6 @@
 // написати рекурсивну функцію, яка збирає всі назви класів з файлу rules.html в окремий масив. масив вивести в консоль
 
-//№1 Простий цикл
-// const elementsClassList = document.getElementsByClassName('rules');
-//
-// const recursiveFunction = (array) => {
-//     let newArray = [];
-//     for (let elem of array) {
-//         newArray.push(elem.classList.value);
-//     }
-//     return newArray;
-// }
-// console.log(recursiveFunction(elementsClassList));
-
-//№2 Рекурсія
+//№1 Рекурсія
 
 // const newArray = [];
 // const elementsClassList = document.getElementsByClassName('rules');
@@ -31,25 +19,17 @@
 // recursiveFunction(elementsClassList);
 // console.log(newArray);
 
-//Рекарсія по елементах
-const newArray = [];
-const recursiveFunction = (startElement) => {
-    // console.log(startElement);
-    if (startElement.children.length) {
-        for (let element of startElement.children) {
-            if (element.className.includes('rules')) {
-                const superArray = element.className.toString().split(' ');
-                newArray.push(superArray[0], superArray[1]);
-            }
-            recursiveFunction(element);
+//№2 Рекурсія
+
+function reCall(startElement) {
+    let newArr = [];
+    for (const el of startElement) {
+        if (el.children) {
+            newArr.push(...reCall(el.children));
         }
-
+         newArr.push(...el.classList);
     }
-
+    return newArr;
 }
 
-recursiveFunction(document.body);
-console.log(newArray);
-
-
-
+console.log(reCall(document.body.children));

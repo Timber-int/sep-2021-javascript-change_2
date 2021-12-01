@@ -14,12 +14,13 @@
 
 //№2 Рекурсія
 
-let newArray = [];
+const newArray = [];
 const elementsClassList = document.getElementsByClassName('rules');
 
 let i = 0;
 const recursiveFunction = (array) => {
-    newArray.push(array[i].classList.value);
+    const superArray = array[i].classList.value.toString().split(' ');
+    newArray.push(superArray[0], superArray[1]);
     i++;
 
     if (i === array.length) return;

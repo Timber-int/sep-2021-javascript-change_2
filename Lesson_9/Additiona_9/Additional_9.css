@@ -1,0 +1,21 @@
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userList {
+    background-color: lightseagreen;
+    margin: 10px;
+    border: 1px solid black;
+    width: 20%;
+}
+
+div > div {
+    margin: 5px;
+    border: 1px solid black;
+}
+
+/*.companyList {*/
+/*    background-color: red;*/
+/*}*/

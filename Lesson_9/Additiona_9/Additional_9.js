@@ -233,24 +233,24 @@ let usersList = [
     }
 ];
 
-// usersList.forEach((user) => {
-//     const userContainer = document.createElement("div");
-//     userContainer.classList.add('userList');
-//     const recursiveFunk = (user) => {
-//         for (let userKey in user) {
-//             if (user[userKey].length === undefined) {
-//                 recursiveFunk(user[userKey]);
-//             }
-//
-//             const divUserKey = document.createElement("div");
-//
-//             divUserKey.innerText = `${user[userKey]} `;
-//             userContainer.append(divUserKey);
-//         }
-//     }
-//     document.body.append(userContainer);
-//     recursiveFunk(user);
-// });
+usersList.forEach((user) => {
+    const userContainer = document.createElement("div");
+    userContainer.classList.add('userList');
+    const recursiveFunk = (user) => {
+        for (let userKey in user) {
+            if (user[userKey].length === undefined) {
+                recursiveFunk(user[userKey]);
+            }
+
+            const divUserKey = document.createElement("div");
+
+            divUserKey.innerText = `${user[userKey]} `;
+            userContainer.append(divUserKey);
+        }
+    }
+    document.body.append(userContainer);
+    recursiveFunk(user);
+});
 
 
 // Створити під кожен елемент окремий блок.

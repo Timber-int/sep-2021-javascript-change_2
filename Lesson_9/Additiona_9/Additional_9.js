@@ -233,90 +233,90 @@ let usersList = [
     }
 ];
 
-usersList.forEach((user) => {
-    const userContainer = document.createElement("div");
-    userContainer.classList.add('userList');
-    const recursiveFunk = (user) => {
-        for (let userKey in user) {
-            if (user[userKey].length === undefined) {
-                recursiveFunk(user[userKey]);
-            }
-
-            const divUserKey = document.createElement("div");
-
-            divUserKey.innerText = `${user[userKey]} `;
-            userContainer.append(divUserKey);
-        }
-    }
-    document.body.append(userContainer);
-    recursiveFunk(user);
-});
+// usersList.forEach((user) => {
+//     const userContainer = document.createElement("div");
+//     userContainer.classList.add('userList');
+//     const recursiveFunk = (user) => {
+//         for (let userKey in user) {
+//             if (user[userKey].length === undefined) {
+//                 recursiveFunk(user[userKey]);
+//             }
+//
+//             const divUserKey = document.createElement("div");
+//
+//             divUserKey.innerText = `${user[userKey]} `;
+//             userContainer.append(divUserKey);
+//         }
+//     }
+//     document.body.append(userContainer);
+//     recursiveFunk(user);
+// });
 
 
 // Створити під кожен елемент окремий блок.
 //     В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блоки.
 
-// usersList.forEach((user) => {
+usersList.forEach((user) => {
 
 
-// let div = document.createElement("div");
-// div.classList.add('userList');
-// let divId = document.createElement("div");
-// let divName = document.createElement("div");
-// let divUserName = document.createElement("div");
-// let divEmail = document.createElement("div");
-// let divAddress = document.createElement("div");
-// let divPhone = document.createElement("div");
-// let divWebsite = document.createElement("div");
-// let divCompany = document.createElement("div");
-// divCompany.classList.add('companyList');
-//
-//
-// let divAddressStreet = document.createElement("div");
-// let divAddressSuite = document.createElement("div");
-// let divAddressCity = document.createElement("div");
-// let divAddressZipCode = document.createElement("div");
-// let divAddressGeo = document.createElement("div");
-//
-// let divGeoLat = document.createElement("div");
-// let divGeoLng = document.createElement("div");
-//
-//
-// let companyName = document.createElement("div");
-// let companyCatchPhrase = document.createElement("div");
-// let companyBs = document.createElement("div");
-//
-//
-//     divId.innerText = user.id;
-//     divName.innerText = user.name;
-//     divUserName.innerText = user.username;
-//     divEmail.innerText = user.email;
-//     divAddress.innerText = 'address:';
-//     divPhone.innerText = user.phone;
-//     divWebsite.innerText = user.website;
-//     divCompany.innerHTML = 'company: <br>';
-//
-//     divAddressStreet.innerText = user.address.street;
-//     divAddressSuite.innerText = user.address.suite;
-//     divAddressCity.innerText = user.address.city;
-//     divAddressZipCode.innerText = user.address.zipcode;
-//     divAddressGeo.innerText = 'geo:';
-//
-//     divGeoLat.innerText = user.address.geo.lat;
-//     divGeoLng.innerText = user.address.geo.lng;
-//
-//     companyName = user.company.name;
-//     companyCatchPhrase = user.company.catchPhrase;
-//     companyBs = user.company.bs;
-//
-//
-// divCompany.append(companyName, companyCatchPhrase, companyBs);
-// divCompany.append(companyBs)
-// divAddressGeo.append(divGeoLng, divGeoLat);
-// divAddress.append(divAddressGeo);
-// divAddress.append(divAddressStreet, divAddressSuite, divAddressCity, divAddressZipCode, divAddressGeo);
-// div.append(divId, divName, divUserName, divEmail, divAddress, divPhone, divWebsite, divCompany);
-//
-// document.body.append(div);
-//
-// });
+    let div = document.createElement("div");
+    div.classList.add('userList');
+    let divId = document.createElement("div");
+    let divName = document.createElement("div");
+    let divUserName = document.createElement("div");
+    let divEmail = document.createElement("div");
+    let divAddress = document.createElement("div");
+    let divPhone = document.createElement("div");
+    let divWebsite = document.createElement("div");
+    let divCompany = document.createElement("div");
+    divCompany.classList.add('companyList');
+
+
+    let divAddressStreet = document.createElement("div");
+    let divAddressSuite = document.createElement("div");
+    let divAddressCity = document.createElement("div");
+    let divAddressZipCode = document.createElement("div");
+    let divAddressGeo = document.createElement("div");
+
+    let divGeoLat = document.createElement("div");
+    let divGeoLng = document.createElement("div");
+
+
+    let companyName = document.createElement("div");
+    let companyCatchPhrase = document.createElement("div");
+    let companyBs = document.createElement("div");
+
+
+    divId.innerText = user.id;
+    divName.innerText = user.name;
+    divUserName.innerText = user.username;
+    divEmail.innerText = user.email;
+    divAddress.innerText = 'address:';
+    divPhone.innerText = user.phone;
+    divWebsite.innerText = user.website;
+    divCompany.innerHTML = 'company: <br>';
+
+    divAddressStreet.innerText = user.address.street;
+    divAddressSuite.innerText = user.address.suite;
+    divAddressCity.innerText = user.address.city;
+    divAddressZipCode.innerText = user.address.zipcode;
+    divAddressGeo.innerText = 'geo:';
+
+    divGeoLat.innerText = user.address.geo.lat;
+    divGeoLng.innerText = user.address.geo.lng;
+
+    companyName.innerText = user.company.name;
+    companyCatchPhrase.innerText = user.company.catchPhrase;
+    companyBs.innerText = user.company.bs;
+
+
+    divCompany.append(companyName, companyCatchPhrase, companyBs);
+    divCompany.append(companyBs)
+    divAddressGeo.append(divGeoLng, divGeoLat);
+    divAddress.append(divAddressGeo);
+    divAddress.append(divAddressStreet, divAddressSuite, divAddressCity, divAddressZipCode, divAddressGeo);
+    div.append(divId, divName, divUserName, divEmail, divAddress, divPhone, divWebsite, divCompany);
+
+    document.body.append(div);
+
+});

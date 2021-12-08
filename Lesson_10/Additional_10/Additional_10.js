@@ -116,10 +116,43 @@ let usersWithAddress = [
 
 // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .
 // Функция создает в боди 2 кнопки (назад/вперед)
-// при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
-// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
-//     Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
-//
+// при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед",
+// вы переходите к следующему дочернему элементу (лежащему на одном уровне)
+// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам
+// войти внутрь элемента и  выводит первого ребенка. и тд.
+//     Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему,
+//     лежащему с ним на одном уровне
+
+let buttonNext = document.createElement("button");
+let buttonPrev = document.createElement("button");
+
+buttonNext.classList.add('button-next');
+buttonPrev.classList.add('button-prev');
+
+buttonNext.innerText = "Next";
+buttonPrev.innerText = "Prev";
+
+
+
+document.body.append(buttonNext, buttonPrev);
+
+function recursiveFunk(startElement) {
+    console.log(startElement);
+
+    buttonNext.onclick = function (e) {
+        e.preventDefault();
+        if (startElement.children.length) {
+            for (const element of startElement.children) {
+                recursiveFunk(element);
+            }
+        }
+    }
+}
+
+recursiveFunk(document.body);
+
+// в процесі
+
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
 
 // let slideIndex = 1;
@@ -158,3 +191,12 @@ let usersWithAddress = [
 //     Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
 // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
 
+
+document.body.addEventListener("mouseup", function (e) {
+    let selection = window.getSelection();
+    selection = selection.toString();
+    console.log(selection);
+
+    selection = selection.replaceAll(selection.toString(), selection.toString().bold());
+    // в процесі
+});

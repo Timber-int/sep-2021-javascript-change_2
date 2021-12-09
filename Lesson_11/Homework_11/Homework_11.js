@@ -1,3 +1,4 @@
+// localStorage.clear()
 // -створити форму з інпутами для name та age.
 //     При відправці форми записати об\'єкт в localstorage
 const form = document.createElement("form");
@@ -64,11 +65,11 @@ buttonCar.style.backgroundColor = 'black';
 buttonCar.style.color = 'white';
 buttonCar.style.margin = '10px';
 
+const carInfo = JSON.parse(localStorage.getItem('carInfo')) || [];
 buttonCar.onclick = function (e) {
     e.preventDefault();
 
     if (inputModel.value.length && inputType.value.length && inputVolume.value.length) {
-        const carInfo = [];
 
         const model = inputModel.value;
         const type = inputType.value;
@@ -76,10 +77,7 @@ buttonCar.onclick = function (e) {
 
         carInfo.push({model, type, volume});
 
-        let carKey = Math.random() * 10000;
-        carKey = carKey + inputModel.value.toUpperCase();
-
-        localStorage.setItem(carKey.toString(), JSON.stringify(carInfo));
+        localStorage.setItem("carInfo", JSON.stringify(carInfo));
     }
 }
 

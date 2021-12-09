@@ -20,3 +20,4 @@ if (favorite) {
     div.innerText = "Немає обраних користувачів!";
 }
 document.body.append(div);
+localStorage.removeItem("favorite");

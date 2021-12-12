@@ -1,0 +1,41 @@
+.containerPosts {
+    background-color: lightsalmon;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.post-div {
+    border: 1px solid black;
+    width: 18%;
+    margin: 5px;
+}
+
+.post-key {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: lightskyblue;
+    font-size: 10px;
+}
+
+.container-comments {
+    background-color: teal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+}
+
+.comment-div {
+    border: 1px solid black;
+    width: 15%;
+    margin: 5px;
+}
+
+.comment-key {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: whitesmoke;
+    font-size: 10px;
+}

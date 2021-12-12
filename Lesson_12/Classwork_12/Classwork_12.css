@@ -1,0 +1,66 @@
+.container-posts {
+    background-color: lightsalmon;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.post-div {
+    border: 1px solid black;
+    width: 18%;
+    margin: 5px;
+    text-align: center;
+}
+
+.post-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid tomato;
+    color: whitesmoke;
+    background-color: lightcoral;
+    font-size: 10px;
+    cursor: pointer;
+
+}
+
+.post-key {
+    border: 1px solid black;
+    margin: 5px;
+   background-color: lightcoral;
+    font-size: 10px;
+}
+
+.container-comments {
+    top: -100%;
+    position: absolute;
+    background-color: lightskyblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    transition: 2s;
+}
+.comment-div {
+    border: 1px solid black;
+    width: 15%;
+    margin: 5px;
+}
+
+.comment-key {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: whitesmoke;
+    font-size: 10px;
+}
+.show-comment{
+    width: 40%;
+    position: fixed;
+    border-radius: 10%;
+    top: 200px;
+
+}
+.comment-change{
+    width: 40%;
+}

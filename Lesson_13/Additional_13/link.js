@@ -71,7 +71,6 @@ const deleteProduct = (id) => {
     shop = shop.filter((product) => product.id !== id);
     localStorage.setItem(key, JSON.stringify(shop));
     container.innerHTML = '';
-
     startShop();
 }
 

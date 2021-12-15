@@ -1,0 +1,18 @@
+#formMarket > input {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+#shopButton {
+    width: 15%;
+    height: 25px;
+    margin: 5px;
+    background-color: lightblue;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#showNewPage {
+    text-decoration: none;
+}

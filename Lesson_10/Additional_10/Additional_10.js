@@ -155,37 +155,37 @@ recursiveFunk(document.body);
 
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
 
-// let slideIndex = 1;
-//
-// showSlides(slideIndex);
-//
-// currentSlide(slideIndex);
-//
-// function plusSlides(n) {
-//     showSlides(slideIndex += n);
-// }
-//
-// function currentSlide(n) {
-//     showSlides(slideIndex = n);
-// }
-//
-// function showSlides(n) {
-//
-//     let slide = document.getElementsByClassName("mySlide");
-//
-//
-//     if (n > slide.length) {
-//         slideIndex = 1;
-//     } else if (n < 1) {
-//         slideIndex = slide.length
-//     }
-//     for (let i = 0; i < slide.length; i++) {
-//         slide[i].style.display = "none";
-//     }
-//
-//     slide[slideIndex - 1].style.display = "block";
-//
-// }
+let slideIndex = 1;
+
+showSlides(slideIndex);
+
+currentSlide(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+
+    let slide = document.getElementsByClassName("mySlide");
+
+
+    if (n > slide.length) {
+        slideIndex = 1;
+    } else if (n < 1) {
+        slideIndex = slide.length
+    }
+    for (let i = 0; i < slide.length; i++) {
+        slide[i].style.display = "none";
+    }
+
+    slide[slideIndex - 1].style.display = "block";
+
+}
 
 
 //     Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити

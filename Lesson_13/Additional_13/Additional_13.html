@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="Additional_13.css">
+<body>
+<!--// - Імітуємо наповнення інтернет магазину товарами :-->
+<!--//     Створити форму з наступними полями :-->
+<!--//     - назва товару-->
+<!--// - кількість товару-->
+<!--// - ціна товару-->
+<!--// - картинка товару (посилання з інтернету)-->
+<!--// Зберігати товари в масив в локалсорадж. При збережені товару з форми, action не повинно відбуватись (preventDefault)-->
+<!--// створити елемент <a href='list.html'> На сторінку товарів</a>, та list.html, при переході на який відобразити на сторінці всі товари.-->
+<!--// На сторінці  list.html побудувати кнопку яка видаляє всі товари з корзини та локалстораджа.-->
+<!--//     До кожного товару додати кнопку, при кліку на яку з лс видаляється конкретний обраний  товар-->
+
+<form id="formMarket">
+    <input type="text" name="productName" value="" placeholder="Введіть назву продукту">
+    <input type="number" name="productNumber" value="" placeholder="Введіть кількість продукту">
+    <input type="number" name="productPrice" value="" placeholder="Введіть ціну продукту">
+    <input type="text" name="productImage" value="" placeholder="Введіть картинку продукту">
+</form>
+<button id="shopButton">Зберегти продукт</button>
+
+<a target="_blank" href="list.html" id="showNewPage">Прейти на сторінку товарів</a>
+
+<script src="Additional_13.js"></script>
+
+</body>
+</html>

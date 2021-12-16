@@ -1,0 +1,93 @@
+body {
+    background-color: lightskyblue;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+}
+
+.href {
+
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.user-container > div {
+    border: 1px solid black;
+    text-align: center;
+    margin: 5px;
+    background-color: whitesmoke;
+    font-size: 12px;
+    border-radius: 10px;
+
+
+}
+
+.user-container > div > div, .user-container > div > div > div {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: whitesmoke;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.button-postUser {
+    width: 100%;
+    height: 20px;
+    background-color: lightslategrey;
+    color: whitesmoke;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 12px;
+
+
+}
+
+.post-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 18%;
+    background-color: whitesmoke;
+    font-size: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.post-box > div {
+    margin: 5px;
+    height: 30%;
+}
+
+.post-button {
+    height: 20px;
+    background-color: lightslategrey;
+    color: whitesmoke;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 8px;
+    margin: 5px;
+    width: 80%;
+}
